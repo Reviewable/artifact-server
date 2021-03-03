@@ -52,7 +52,6 @@ server.get('/_apis/pipelines/workflows/:runId/artifacts', (req, res) => {
         }
         artifacts.add(fileDetails);
     });
-    console.log(artifacts);
     res.status(200).json({count: artifacts.count, value: [...artifacts]});
 });
 
@@ -61,8 +60,6 @@ server.get('/download/:container', (req, res) => {
     const baseURL = `${req.protocol}://${req.get('host')}${req.baseUrl}`;
     const files = new Set();
     totalist(container, (name, abs, stats) => {
-        console.log(name);
-        console.log(abs);
         files.add({
             path: path.normalize(name),
             itemType: 'file',
