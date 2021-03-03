@@ -1,0 +1,7 @@
+{
+    "name": "Artifacts Server for Github Actions",
+    "description": "An Express App to simulate Github Artifacts server",
+    "repository": "https://github.com/Reviewable/artifact-server",
+    "logo": "https://node-js-sample.herokuapp.com/node.png",
+    "keywords": ["node", "express", "github"]
+  }
